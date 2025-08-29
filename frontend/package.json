@@ -28,7 +28,7 @@
     "date-fns": "^4.1.0",
     "lucide-react": "^0.539.0",
     "react": "^19.1.1",
-    "react-day-picker": "^9.8.1",
+    "react-day-picker": "^9.9.0",
     "react-devtools": "^6.1.5",
     "react-dom": "^19.1.1",
     "react-hot-toast": "^2.5.2",
