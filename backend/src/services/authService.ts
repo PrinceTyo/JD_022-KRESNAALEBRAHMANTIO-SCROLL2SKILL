@@ -46,9 +46,3 @@ export const loginService = async (data: LoginInput) => {
 
   return { token, user };
 };
-
-export const getUserService = async (userId: string) => {
-  const user = await User.findById(userId).select("-password");
-  if (!user) throw new Error("User not found");
-  return user;
-};
