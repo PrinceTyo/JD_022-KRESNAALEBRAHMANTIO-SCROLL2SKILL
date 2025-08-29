@@ -1,5 +1,5 @@
-export default function Login() {
+export default function Target() {
     return (
-        <div>Login</div>
+        <div>Target</div>
     )
 }

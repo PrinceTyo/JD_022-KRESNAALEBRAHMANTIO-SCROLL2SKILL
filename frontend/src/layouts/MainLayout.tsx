@@ -1,3 +1,4 @@
+import { AppSidebar } from "@/components/Shared/Navbar/AppSidebar";
 import { Separator } from "@/components/ui/separator";
 import { Outlet, useLocation } from "react-router-dom";
 import { HomeIcon, Activity, Target } from "lucide-react";
@@ -19,6 +20,7 @@ export default function MainLayout() {
 
   return (
     <div className="flex h-screen">
+      <AppSidebar />
       <main className="flex flex-col gap-4 px-4 pt-3 flex-1 overflow-hidden">
         <div className="hidden md:flex items-center gap-3">
           <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center">
