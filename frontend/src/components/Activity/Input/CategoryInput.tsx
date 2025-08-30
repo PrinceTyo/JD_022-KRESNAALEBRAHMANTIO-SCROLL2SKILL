@@ -1,6 +1,6 @@
 import { CategoryBadge } from "@/components/Activity/Badges/CategoryBadge";
 
-interface Props {
+interface CategoryInputProps {
   type: "productive" | "distraction";
   category: string;
   setCategory: (v: string) => void;
@@ -23,7 +23,7 @@ const distractionCategories = [
   { value: "others", label: "Others" },
 ];
 
-export const CategoryInput = ({ type, category, setCategory }: Props) => {
+export const CategoryInput = ({ type, category, setCategory }: CategoryInputProps) => {
   const categories = type === "productive" ? productiveCategories : distractionCategories;
 
   return (

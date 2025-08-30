@@ -6,7 +6,7 @@ import { Calendar as CalendarIcon } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { RangeCalendarForm } from "../Forms/RangeCalenderForm";
 
-type TimePickerProps = {
+interface TimePickerProps {
   onDaySelect?: (day: Date | null) => void;
   label: string;
 };

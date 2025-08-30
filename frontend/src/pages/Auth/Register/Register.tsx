@@ -1,5 +1,5 @@
 import { useState } from "react";
-import PasswordInput from "../../../components/Auth/Input/PasswordInput";
+import { PasswordInput } from "../../../components/Auth/Input/PasswordInput";
 import { validateEmail } from "../../../utils/helper";
 import { Link, useNavigate } from "react-router-dom";
 import { authApi } from "../../../api/authApi";

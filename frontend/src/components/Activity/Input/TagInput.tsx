@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Plus, X } from "lucide-react";
 
-interface TagsInputProps {
+interface TagInputProps {
   tags: string[];
   setTags: React.Dispatch<React.SetStateAction<string[]>>;
 }
 
-export const TagInput = ({ tags, setTags }: TagsInputProps) => {
+export const TagInput = ({ tags, setTags }: TagInputProps) => {
   const [inputValue, setInputValue] = useState("");
 
   const addNewTag = () => {
@@ -61,7 +61,7 @@ export const TagInput = ({ tags, setTags }: TagsInputProps) => {
           onChange={(e) => setInputValue(e.target.value)}
           onKeyDown={handleKeyDown}
           placeholder="Add a tag and press Enter"
-          className="flex-1 p-3 rounded-lg border border-gray-200 bg-white/80 backdrop-blur-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all placeholder:text-gray-400"
+          className="flex-1 p-3 rounded-lg border border-gray-200 bg-white/80 backdrop-blur-sm focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all placeholder:text-gray-400"
         />
         <button
           type="button"

@@ -16,7 +16,7 @@ interface ProfileInfoProps {
   isOpen: boolean;
 }
 
-export default function ProfileInfo({ isOpen }: ProfileInfoProps) {
+export const ProfileInfo = ({ isOpen }: ProfileInfoProps) => {
   const auth = useContext(AuthContext);
   const navigate = useNavigate();
 

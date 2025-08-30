@@ -14,14 +14,14 @@ interface SourceLinkInputProps {
   allowedDomains?: string[];
 }
 
-export const SourceLinkInput: React.FC<SourceLinkInputProps> = ({
+export const SourceLinkInput = ({
   sourceLink,
   setSourceLink,
   label = "Source Link",
   placeholder = "https://example.com",
   required = false,
   allowedDomains,
-}) => {
+}: SourceLinkInputProps ) => {
   const [inputValue, setInputValue] = useState(sourceLink);
   const [error, setError] = useState("");
   const [isValid, setIsValid] = useState(false);

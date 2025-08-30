@@ -1,11 +1,11 @@
 import { Zap, AlertCircle } from "lucide-react";
 
-interface Props {
+interface TypeInputProps {
   type: "productive" | "distraction";
   setType: (v: "productive" | "distraction") => void;
 }
 
-export const TypeInput = ({ type, setType }: Props) => {
+export const TypeInput = ({ type, setType }: TypeInputProps) => {
   return (
     <div className="space-y-3">
       <label className="text-sm font-semibold text-gray-700 flex items-center gap-2">

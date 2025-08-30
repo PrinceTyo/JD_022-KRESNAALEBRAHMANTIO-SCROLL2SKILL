@@ -10,7 +10,7 @@ import type { DateRange } from "react-day-picker";
 import { differenceInDays } from "date-fns";
 import toast from "react-hot-toast";
 
-type RangeCalendarFormProps = {
+interface RangeCalendarFormProps {
   value: DateRange | undefined;
   setValue: (value: DateRange | undefined) => void;
 };

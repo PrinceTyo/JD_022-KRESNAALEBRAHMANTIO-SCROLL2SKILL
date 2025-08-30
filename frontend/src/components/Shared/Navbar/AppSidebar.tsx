@@ -7,7 +7,7 @@ import {
 import { HomeIcon, Activity, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate, useLocation } from "react-router-dom";
-import ProfileInfo from "../../Auth/Cards/ProfileInfo";
+import { ProfileInfo } from "@/components/Auth/Cards/ProfileInfo";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 

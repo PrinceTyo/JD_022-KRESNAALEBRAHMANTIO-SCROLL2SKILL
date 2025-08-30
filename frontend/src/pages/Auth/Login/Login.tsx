@@ -4,7 +4,7 @@ import { AuthContext } from "@/contexts/AuthContext";
 import { authApi } from "@/api/authApi";
 import { toast } from "react-hot-toast";
 import { validateEmail } from "@/utils/helper";
-import PasswordInput from "@/components/Auth/Input/PasswordInput";
+import { PasswordInput } from "@/components/Auth/Input/PasswordInput";
 
 export default function Login() {
   const [email, setEmail] = useState("");

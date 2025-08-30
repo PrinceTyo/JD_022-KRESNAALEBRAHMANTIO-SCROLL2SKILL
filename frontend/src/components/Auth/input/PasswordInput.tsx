@@ -7,7 +7,7 @@ interface PasswordInputProps {
   placeholder?: string;
 }
 
-export default function PasswordInput({ value, onChange, placeholder = "Password" }: PasswordInputProps) {
+export const PasswordInput = ({ value, onChange, placeholder = "Password" }: PasswordInputProps) => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (

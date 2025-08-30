@@ -1,6 +1,6 @@
 import { Calendar } from "lucide-react";
 
-interface Props {
+interface TimeInputProps {
   startHour: string;
   startMinute: string;
   endHour: string;
@@ -17,7 +17,7 @@ const minuteOptions = ["00", "15", "30", "45"];
 export const TimeInput = ({
   startHour, startMinute, endHour, endMinute,
   setStartHour, setStartMinute, setEndHour, setEndMinute
-}: Props) => {
+}: TimeInputProps) => {
   return (
     <div className="space-y-3">
       <label className="text-sm font-semibold text-gray-700 flex items-center gap-2">
