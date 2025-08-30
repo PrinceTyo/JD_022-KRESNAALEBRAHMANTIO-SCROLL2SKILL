@@ -1,17 +1,17 @@
 import { ScrollArea } from '@/components/ui/scroll-area';
-import ActivityCard from '@/components/Activity/Cards/ActivityCard';
-import TimePicker from '@/components/Shared/Cards/TimePicker';
+import { ActivityCard } from '@/components/Activity/Cards/ActivityCard';
+import { TimePicker } from '@/components/Shared/Cards/TimePicker';
 import { FiActivity } from 'react-icons/fi';
 import type { ActivityData } from '@/api/activityApi';
 
-interface Props {
+interface ActivityTimelineProps {
   activities: ActivityData[];
   onDaySelect: (d: Date | null) => void;
   onEdit: (a: ActivityData) => void;
   onDelete: (id: string) => void;
 }
 
-export const ActivityTimeline = ({ activities, onDaySelect, onEdit, onDelete }: Props) => (
+export const ActivityTimeline = ({ activities, onDaySelect, onEdit, onDelete }: ActivityTimelineProps) => (
   <div className="col-span-1 md:col-span-4 md:row-span-12 md:col-start-9 md:row-start-1 rounded-2xl shadow-md border border-gray-100 px-4 py-5 max-h-fit">
     <TimePicker onDaySelect={onDaySelect} label="Activity" />
     <ScrollArea className="h-[50vh] md:h-[123vh] mt-4 pr-4">

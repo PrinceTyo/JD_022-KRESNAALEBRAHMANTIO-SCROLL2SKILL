@@ -1,4 +1,4 @@
-import CategoryBadge from "@/components/Shared/Badges/CategoryBadge";
+import { CategoryBadge } from "@/components/Activity/Badges/CategoryBadge";
 
 interface Props {
   type: "productive" | "distraction";
@@ -23,7 +23,7 @@ const distractionCategories = [
   { value: "others", label: "Others" },
 ];
 
-export default function CategoryInput({ type, category, setCategory }: Props) {
+export const CategoryInput = ({ type, category, setCategory }: Props) => {
   const categories = type === "productive" ? productiveCategories : distractionCategories;
 
   return (

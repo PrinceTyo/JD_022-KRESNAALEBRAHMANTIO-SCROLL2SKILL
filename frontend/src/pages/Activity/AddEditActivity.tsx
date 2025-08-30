@@ -1,7 +1,7 @@
-import CategoryInput from "@/components/Activity/Input/CategoryInput";
-import TagInput from "@/components/Activity/Input/tagInput";
-import TimeInput from "@/components/Activity/Input/TimeInput";
-import TypeInput from "@/components/Activity/Input/TypeInput";
+import { CategoryInput } from "@/components/Activity/Input/CategoryInput";
+import { TagInput } from "@/components/Activity/Input/TagInput";
+import { TimeInput } from "@/components/Activity/Input/TimeInput";
+import { TypeInput } from "@/components/Activity/Input/TypeInput";
 import { Plus, Edit, Activity } from "lucide-react";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
@@ -179,7 +179,7 @@ export default function AddEditActivity({
 
         <div className="space-y-3">
           <label className="text-sm font-semibold text-gray-700 flex items-center gap-2">
-            <span className="w-2 h-2 bg-indigo-500 rounded-full"></span>
+            <span className="w-2 h-2 bg-secondary rounded-full"></span>
             Description
           </label>
           <textarea

@@ -1,4 +1,3 @@
-
 import { Request, Response } from "express";
 import { registerService, loginService } from "../services/authService";
 import { sendSuccess, sendError } from "../utils/response";

@@ -22,14 +22,14 @@ interface QuickStatsCardProps {
   icon?: React.ReactNode;
 }
 
-export default function ({
+export const QuickStatsCard = ({
   activities = [],
   filterType = "productive",
   title = "Productive",
   description,
   primaryColor = "#10B981",
   secondaryColor = "#E5E7EB",
-}: QuickStatsCardProps) {
+}: QuickStatsCardProps) => {
   const filteredTime = activities
     .filter(
       (a) => (a.type || "").trim().toLowerCase() === filterType.toLowerCase()

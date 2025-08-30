@@ -14,10 +14,10 @@ interface Props {
 const hourOptions = Array.from({ length: 24 }, (_, i) => i.toString().padStart(2, "0"));
 const minuteOptions = ["00", "15", "30", "45"];
 
-export default function TimeInput({
+export const TimeInput = ({
   startHour, startMinute, endHour, endMinute,
   setStartHour, setStartMinute, setEndHour, setEndMinute
-}: Props) {
+}: Props) => {
   return (
     <div className="space-y-3">
       <label className="text-sm font-semibold text-gray-700 flex items-center gap-2">

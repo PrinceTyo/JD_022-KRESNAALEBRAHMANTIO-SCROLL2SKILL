@@ -33,7 +33,7 @@ export function AppSidebar() {
             />
           </TooltipTrigger>
           <TooltipContent side="right">
-            <p>Waktuku Kemana</p>
+            <p>Scroll2Skill</p>
           </TooltipContent>
         </Tooltip>
       </div>

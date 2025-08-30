@@ -11,7 +11,7 @@ interface DateFilterSelectProps {
   onValueChange: (value: string) => void;
 }
 
-export default function DateFilterSelect({ value, onValueChange }: DateFilterSelectProps) {
+export const DateFilterSelect = ({ value, onValueChange }: DateFilterSelectProps) => {
   return (
     <Select value={value} onValueChange={onValueChange}>
       <SelectTrigger className="w-full md:w-[180px]">

@@ -5,7 +5,7 @@ interface Props {
   setType: (v: "productive" | "distraction") => void;
 }
 
-export default function TypeInput({ type, setType }: Props) {
+export const TypeInput = ({ type, setType }: Props) => {
   return (
     <div className="space-y-3">
       <label className="text-sm font-semibold text-gray-700 flex items-center gap-2">

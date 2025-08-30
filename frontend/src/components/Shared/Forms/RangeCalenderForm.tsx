@@ -15,10 +15,10 @@ type RangeCalendarFormProps = {
   setValue: (value: DateRange | undefined) => void;
 };
 
-export default function RangeCalendarForm({
+export const RangeCalendarForm = ({
   value,
   setValue,
-}: RangeCalendarFormProps) {
+}: RangeCalendarFormProps) => {
   const handleSelect = (range: DateRange | undefined) => {
     if (!range?.from || !range?.to) {
       setValue(undefined);

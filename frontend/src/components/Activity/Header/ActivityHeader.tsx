@@ -2,11 +2,11 @@ import { Plus } from 'lucide-react';
 import { useContext } from 'react';
 import { AuthContext } from '@/contexts/AuthContext';
 
-interface Props {
+interface ActivityHeaderProps {
   onAdd: () => void;
 }
 
-export const ActivityHeader = ({ onAdd }: Props) => {
+export const ActivityHeader = ({ onAdd }: ActivityHeaderProps) => {
   const auth = useContext(AuthContext);
   const userName = auth?.user?.name || 'Guest';
 

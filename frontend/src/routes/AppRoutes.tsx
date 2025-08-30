@@ -6,6 +6,7 @@ import ActivityPage from "../pages/Activity/Activity";
 import TargetPage from "../pages/Target/Target";
 import ProtectedRoute from "./ProtectedRoute";
 import MainLayout from "../layouts/MainLayout";
+import NotFound from "@/pages/NotFound/NotFound";
 
 export default function AppRoutes() {
   return (
@@ -24,6 +25,8 @@ export default function AppRoutes() {
         <Route path="/activity" element={<ActivityPage />} />
         <Route path="/target" element={<TargetPage />} />
       </Route>
+
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }

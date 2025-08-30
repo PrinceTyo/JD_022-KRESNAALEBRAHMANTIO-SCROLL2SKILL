@@ -6,7 +6,7 @@ interface TagsInputProps {
   setTags: React.Dispatch<React.SetStateAction<string[]>>;
 }
 
-export default function TagInput({ tags, setTags }: TagsInputProps) {
+export const TagInput = ({ tags, setTags }: TagsInputProps) => {
   const [inputValue, setInputValue] = useState("");
 
   const addNewTag = () => {

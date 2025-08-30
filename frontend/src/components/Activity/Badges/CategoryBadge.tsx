@@ -31,11 +31,11 @@ interface CategoryBadgeProps {
   variant?: "default" | "transparent";
 }
 
-export default function CategoryBadge  ({
+export const CategoryBadge = ({
   category,
   iconSize = 18,
   variant = "default",
-}: CategoryBadgeProps) {
+}: CategoryBadgeProps) => {
   const baseStyle =
     variant === "transparent"
       ? "flex items-center"

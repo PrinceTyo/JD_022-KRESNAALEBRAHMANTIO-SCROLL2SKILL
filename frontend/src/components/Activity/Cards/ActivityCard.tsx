@@ -1,7 +1,8 @@
 import { Pencil, Trash, Clock } from "lucide-react";
-import { CATEGORY_ICONS } from "@/components/Shared/Badges/CategoryBadge";
+import { CATEGORY_ICONS } from "@/components/Activity/Badges/CategoryBadge";
 import React from "react";
 import type { ActivityData } from "@/api/activityApi";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 interface ActivityCardProps {
   activity: ActivityData;
@@ -9,11 +10,11 @@ interface ActivityCardProps {
   onDelete?: () => void;
 }
 
-export default function ActivityCard({
+export const ActivityCard = ({
   activity,
   onEdit,
   onDelete,
-}: ActivityCardProps) {
+}: ActivityCardProps) => {
   const icon =
     CATEGORY_ICONS[activity.category as keyof typeof CATEGORY_ICONS] ??
     CATEGORY_ICONS.others;
@@ -55,7 +56,9 @@ export default function ActivityCard({
         </div>
 
         <div>
-          <p className="text-xs">{activity.description}</p>
+          <ScrollArea className="h-20 w-full p-2">
+            <p className="text-xs whitespace-pre-wrap">{activity.description}</p>
+          </ScrollArea>
           {activity.tags && (
             <div className="flex flex-wrap gap-1 mt-1">
               {activity.tags.map((tag, i) => (

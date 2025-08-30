@@ -1,20 +1,20 @@
 import { useMemo } from 'react';
 import ProDisChartCard, { getNormalizedChartData } from '@/components/Activity/Cards/ProDisChartCard';
-import QuickStatsCard from '@/components/Activity/Cards/QuickStatsCard';
-import CategoryBadge from '@/components/Shared/Badges/CategoryBadge';
-import DateFilterSelect from '@/components/Shared/Input/DateFilterSelect';
+import { QuickStatsCard } from '@/components/Activity/Cards/QuickStatsCard';
+import { CategoryBadge } from '@/components/Activity/Badges/CategoryBadge';
+import { DateFilterSelect } from '@/components/Shared/Input/DateFilterSelect';
 import { MoreHorizontal } from 'lucide-react';
 import { getTopCategory } from '../../utils/Activity/activityHelpers';
 import { formatTime } from '../../utils/helper';
 import type { ActivityData } from '@/api/activityApi';
 
-interface Props {
+interface ActivityStatsProps {
   activities: ActivityData[];
   range: string;
   onRangeChange: (r: string) => void;
 }
 
-export const ActivityStats = ({ activities, range, onRangeChange }: Props) => {
+export const ActivityStats = ({ activities, range, onRangeChange }: ActivityStatsProps) => {
   const productiveTop = useMemo(() => getTopCategory('productive', activities), [activities]);
   const distractionTop = useMemo(() => getTopCategory('distraction', activities), [activities]);
 
